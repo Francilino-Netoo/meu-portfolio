@@ -386,6 +386,12 @@ span {
   box-shadow: 0 0 1rem var(--nain-color);
 }
 
+@media (max-width: 1500px) {
+  html {
+    font-size: 45%;
+  }
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;

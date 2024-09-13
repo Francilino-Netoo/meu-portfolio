@@ -321,7 +321,8 @@ span {
 }
 
 .contact h2 {
-  margin-bottom: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 .contact form {
   max-width: 70rem;
@@ -345,7 +346,7 @@ span {
   margin: 0.7rem 0;
 }
 .contact form .input-box input {
-  width: 49%;
+  width: 100%;
 }
 .contact form textarea {
   resize: none;

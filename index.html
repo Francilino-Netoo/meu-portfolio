@@ -58,7 +58,8 @@
             ><i class="bx bxl-whatsapp"></i
           ></a>
         </div>
-        <a href="#" class="btn">Dowload CV</a>
+        <a href="./images/curriculo.pdf"
+        download="curriculo" class="btn">Dowload CV</a>
       </div>
       <div class="home-img">
         <img src="images/home.png" alt="" />
@@ -92,35 +93,56 @@
 
     <!-- services section design -->
     <section class="services" id="services">
-      <h2 class="heading">Meus <span>Trabalhos</span></h2>
+      <h2 class="heading">Meus <span>Serviços</span></h2>
       <div class="services-container">
         <div class="services-box">
           <i class="bx bx-code"></i>
-          <h3>Web Development</h3>
-          <p>
-            Programação é minha paixão, desde os meus 12 anos sempre fui
-            apaixonado por tecnologia e hoje estou atuando na área que amo!
+          <h3>Desenvoledor Back-And</h3>
+          <p class="text-content">
+            Especializado em desenvolvimento back-end, utilizo Python (Flask) ou Node.js para criar APIs robustas e aplicações eficientes. Foco em garantir a segurança, escalabilidade e performance dos sistemas, sempre buscando atender às necessidades dos meus clientes.
           </p>
-          <a href="#" class="btn">Ler Mais</a>
+          <a href="#" class="btn" onclick="toggleText(event)">Ler Mais</a>
         </div>
 
         <div class="services-box">
           <i class="bx bxs-paint"></i>
-          <h3>Web Disigning</h3>
-          <p>
-            Programação é minha paixão, desde os meus 12 anos sempre fui
-            apaixonado por tecnologia e hoje estou atuando na área que amo!
+          <h3>Desenvoledor Web</h3>
+          <p class="text-content">
+            Crio sites dinâmicos e criativos, com o intuito de atender às expectativas dos meus clientes. Utilizo ferramentas como GIMP 2.0 para criar imagens nítidas e impactantes, garantindo que o design visual seja atraente e funcional.
           </p>
-          <a href="#" class="btn">Ler Mais</a>
+          <a href="#" class="btn" onclick="toggleText(event)">Ler Mais</a>
         </div>
         <div class="services-box">
-          <i class="bx bx-bar-chart-alt"></i>
-          <h3>Marketing Digital</h3>
-          <p>
-            Programação é minha paixão, desde os meus 12 anos sempre fui
-            apaixonado por tecnologia e hoje estou atuando na área que amo!
+          <i class='bx bx-bot' ></i>
+          <h3>Chat Bots</h3>
+          <p class="text-content">
+            Desenvolvo chatbots inteligentes utilizando as APIs do Telegram e WhatsApp, automatizando interações e otimizando a comunicação para empresas e projetos, sempre com foco em eficiência e facilidade de uso.
           </p>
-          <a href="#" class="btn">Ler Mais</a>
+          <a href="#" class="btn" onclick="toggleText(event)">Ler Mais</a>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-android"></i>
+          <h3>Desenvoledor Mobile</h3>
+          <p class="text-content">
+            Especializado no desenvolvimento de aplicativos móveis utilizando React Native, criando soluções eficientes e de alta performance para plataformas iOS e Android. Trabalho para garantir uma experiência de usuário fluida e intuitiva, alinhada às necessidades e expectativas dos clientes.
+          </p>
+          <a href="#" class="btn" onclick="toggleText(event)">Ler Mais</a>
+        </div>
+        <div class="services-box">
+          <i class="bx bxs-cog"></i>
+          <h3>Automação Web</h3>
+          <p class="text-content">
+            Especializado em automação web, utilizando ferramentas e técnicas para automatizar processos repetitivos e integrações entre sistemas. Com foco em eficiência e precisão, desenvolvo soluções que economizam tempo e reduzem erros, melhorando a produtividade e a eficácia operacional.
+          </p>
+          <a href="#" class="btn" onclick="toggleText(event)">Ler Mais</a>
+        </div>
+        <div class="services-box">
+          <i class="bx bxs-search"></i> 
+          <h3>Web Scraping</h3>
+          <p class="text-content">
+            Especializado em web scraping para coleta e análise de dados usando bibliotecas como BeautifulSoup e Requests. Utilizo também ferramentas como Playwright para scraping dinâmico e automatizado, proporcionando soluções eficientes para extração e processamento de informações da web.
+          </p>
+          <a href="#" class="btn" onclick="toggleText(event)">Ler Mais</a>
         </div>
       </div>
     </section>
@@ -214,5 +236,23 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
+    <script>
+      function toggleText(event) {
+        event.preventDefault(); 
+        const serviceBox = event.target.closest('.services-box'); 
+        const textContent = serviceBox.querySelector('.text-content'); 
+      
+        if (textContent.classList.contains('expanded')) {
+          textContent.classList.remove('expanded'); 
+          serviceBox.classList.remove('expanded'); 
+          event.target.textContent = 'Ler Mais'; 
+        } else {
+          textContent.classList.add('expanded'); 
+          serviceBox.classList.add('expanded'); 
+          event.target.textContent = 'Ler Menos'; 
+        }
+      } 
+      
+    </script>
   </body>
 </html>

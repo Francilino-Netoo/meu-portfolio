@@ -164,6 +164,7 @@ span {
 .heading {
   text-align: center;
   font-size: 4.5rem;
+  margin-bottom: 5rem;
 }
 
 .about-content h2 {
@@ -185,36 +186,49 @@ span {
 .services-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .services-container .services-box {
+  position: relative;
   flex: 1 1 30rem;
   background: var(--second-bg-color);
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
   text-align: center;
-  border: 0.2rem solid var(--bg-color);
+  transition: height 0.5s ease, transform 0.5s ease;
+  width: 40rem;
+  height: 40rem; /* Altura fixa inicial */
+  overflow: hidden;
 }
-.services-container .services-box {
-  flex: 1 1 30rem;
-  background: var(--second-bg-color);
-  padding: 3rem 2rem 4rem;
-  border-radius: 2rem;
-  text-align: center;
-  border: 0.2rem solid var(--bg-color);
-  transition: 0.5s ease;
-}
+
 .services-container .services-box:hover {
   border-color: var(--nain-color);
   transform: scale(1.02);
+}
+
+.text-content {
+  font-size: 1.6rem;
+  max-height: 8rem; /* Altura inicial do texto */
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.text-content.expanded {
+  max-height: 100rem; /* Expansão do texto quando "Ler Mais" for clicado */
+}
+
+.services-box.expanded {
+  height: auto; /* Permite que a caixa cresça conforme o texto aumenta */
 }
 
 .services-box i {
   font-size: 7rem;
   color: var(--nain-color);
 }
+
 .services-box h3 {
   font-size: 2.6rem;
 }
@@ -223,6 +237,15 @@ span {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
+
+.services-box .btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
 .portfolio {
   background: var(--second-bg-color);
 }
